@@ -32,7 +32,7 @@
     <!-- Login Field End -->
 
     <!-- Success Message -->
-    <div  data-testid="successMessage" class="alert alert-success" style="margin-top: 1rem;">
+    <div *ngIf="loginSuccess" data-testid="successMessage" class="alert alert-success" style="margin-top: 1rem;">
         Successfully logged in
     </div>
   </form>

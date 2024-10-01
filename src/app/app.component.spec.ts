@@ -29,7 +29,7 @@ describe('AppComponent', () => {
     const submitButton = screen.getByText(/login/i);
     const password = screen.getByLabelText('Password');
 
-    fireEvent.change(password, { target: { value: '1234567' } });
+    fireEvent.input(password, { target: { value: '1234567' } });
 
     fireEvent.click(submitButton);
 
@@ -45,7 +45,7 @@ describe('AppComponent', () => {
     const submitButton = screen.getByText(/login/i);
     const email = screen.getByLabelText('Email');
 
-    fireEvent.change(email, { target: { value: 'test2@gmail.com' } });
+    fireEvent.input(email, { target: { value: 'test2@gmail.com' } });
 
     fireEvent.click(submitButton);
 
@@ -63,8 +63,8 @@ describe('AppComponent', () => {
     const submitButton = screen.getByTestId('submit-btn');
 
     // Simulate valid input
-    fireEvent.change(email, { target: { value: 'test2@gmail.com' } });
-    fireEvent.change(password, { target: { value: '1234567' } });
+    fireEvent.input(email, { target: { value: 'test2@gmail.com' } });
+    fireEvent.input(password, { target: { value: '1234567' } });
 
     fireEvent.click(submitButton);
 
